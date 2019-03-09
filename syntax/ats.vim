@@ -51,14 +51,6 @@ syn match atsComment "\v\/\/.*$" contains=atsTodo,@Spell
 syn region atsNestComment start="/\*" end="\*/" contains=atsNestComment,atsTodo,@Spell
 syn region atsNestParenComment start="(\*" end="\*)" contains=atsTodo,@Spell,atsNestParenComment
 
-syntax match logicalAnd '&&' conceal cchar=∧
-syntax match leq '<=' conceal cchar=≤
-syntax match geq '>=' conceal cchar=≥
-syntax match neq '!=' conceal cchar=≠
-syntax match seq '==' conceal cchar=≡
-syntax match logicalOr '||' conceal cchar=∨
-syntax match nullPtr 'null' conceal cchar=∅
-
 syn match atsChar "\v'.'"
 syn match atsChar "\v'.*'" contains=atsSpecial
 syn match atsPattern "\v'\("
@@ -86,8 +78,6 @@ highlight link atsType Type
 highlight link atsIdentifier Identifier
 
 hi def link atsCBlock Special
-
-setlocal conceallevel=1
 
 let b:current_syntax = 'ats'
 
